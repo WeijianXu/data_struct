@@ -1,0 +1,18 @@
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+
+# Android/IntelliJ
+#
+
+# node.js
+#
+
+# c compile file
+**/*.c~
+**/*.exe
+**/*.o
+
