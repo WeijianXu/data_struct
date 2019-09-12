@@ -51,7 +51,7 @@ void Select(HuffmanTree	HT, int end, int *s) {
 }
 
 HuffmanTree initHuffmanTree(int *w, int n) {
-	if (n < 1) {
+	if (n <= 1) {
 		return 0;
 	}
 	int m = 2 * n - 1, i; // 节点数
@@ -89,7 +89,7 @@ HuffmanTree initHuffmanTree(int *w, int n) {
 }
 
 HuffmanCode HuffmanCoding(HuffmanTree HT, int n) {
-	if (n < 1) {
+	if (n <= 1) {
 		return 0;
 	}
 	// 分配n个字符编码的头指针向量 
@@ -120,7 +120,7 @@ int Huffman(int *w, int n) {
 	HuffmanTree HT; // 指向一组 HTNode 节点 
 	HuffmanCode HC; // 指向一组 char *s 编码 ，s 则对应一个编码字符串（长度不固定） 
 	// int n = sizeof(w) / sizeof(int);
-	if (n < 1) {
+	if (n <= 1) {
 		return 0;
 	}
 	HT = initHuffmanTree(w, n);
@@ -135,10 +135,10 @@ int Huffman(int *w, int n) {
 int main() {
 	int n;
 	scanf("%d", &n);
-	if (n < 1) {
+	if (n <= 1) {
 		return 0;
 	}
-	
+	// Huffman 树至少2个叶子节点，一个无法构成Huffman树； 
 	int w[n], i;
 	for (i = 0; i < n; i++) {
 		scanf("%d", &w[i]);
